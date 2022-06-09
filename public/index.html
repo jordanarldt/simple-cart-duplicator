@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple BigCommerce Cart Duplicator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Simple BigCommerce Cart Duplicator</h1>
+    <p>This app will duplicate a BigCommerce storefront cart and redirect you to the new cart that was created with the Server-to-Server Cart API.</p>
+    <p>If you don't want to manually browse and provide the query parameters, feel free to use the form below.</p>
+    <form method="get" action="/redirect">
+      <label for="cart">Storefront Cart ID:</label>
+      <input name="cart" autocomplete="off" type="text" />
+      <button type="submit">Duplicate my cart and redirect!</button>
+    </form>
+  </body>
+</html>
