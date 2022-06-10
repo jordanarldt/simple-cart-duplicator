@@ -10,8 +10,29 @@
     <p>This app will duplicate a BigCommerce storefront cart and redirect you to the new cart that was created with the Server-to-Server Cart API.</p>
     <p>If you don't want to manually browse and provide the query parameters, feel free to use the form below.</p>
     <form method="get" action="/redirect">
-      <label for="cart">Storefront Cart ID:</label>
-      <input id="cart" name="cart" autocomplete="off" type="text" />
+      <div>
+        <label for="cart">Storefront Cart ID:</label>
+        <input id="cart" name="cart" autocomplete="off" type="text" required />
+      </div>
+      <div>
+        <label for="delay">
+          Redirect delay:
+          <span class="note">Use this to replicate the issue where cart redirect URLs expire too quickly</span>
+        </label>
+        <select id="delay" name="delay" required>
+          <option value="0">No delay</option>
+          <option value="1000">1 second</option>
+          <option value="2000">2 seconds</option>
+          <option value="3000">3 seconds</option>
+          <option value="4000">4 seconds</option>
+          <option value="5000">5 seconds</option>
+          <option value="6000">6 seconds</option>
+          <option value="7000">7 seconds</option>
+          <option value="8000">8 seconds</option>
+          <option value="9000">9 seconds</option>
+          <option value="10000">10 seconds</option>
+        </select>
+      </div>
       <button type="submit">Duplicate my cart and redirect!</button>
     </form>
   </body>

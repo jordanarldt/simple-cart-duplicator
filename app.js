@@ -10,7 +10,9 @@ app.get("/redirect", async (req, res) => {
 
   try {
     const redirectUrl = await duplicateCart(req.query.cart);
-    res.redirect(redirectUrl);
+    setTimeout(() => {
+      res.redirect(redirectUrl);
+    }, Number(req.query.delay));
   } catch (e) {
     console.log("Error occurred:", e);
     res.status(500).send("Server Error: Failed to duplicate cart.");
